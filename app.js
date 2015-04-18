@@ -54,6 +54,8 @@ $(document).ready(function () {
         widget1.play();
         count++;
         console.log(count);
+        
+        $('body').css('background', '#000000');
 
         if(count == 2){
           widget1.next();
@@ -63,10 +65,12 @@ $(document).ready(function () {
 
     if(lux  > 10 && lux < 120) {
         widget1.setVolume(100);
+        $('body').css('background', '#FFFFFF');
     }
 
     if(lux > 120 && lux < 500){
         widget1.prev();
+         $('body').css('background', 'yellow');
         count = 0;
     }
 
