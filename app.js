@@ -44,10 +44,13 @@ $(document).ready(function () {
       var obj = JSON.parse(payload.toString());
       var lux = obj.cause.senses[0].val;
 
-    if (lux > 500) {
+    if (lux > 200) {
         widget1.pause();
-        var src = 'https://www.youtube.com/tv#/watch?v=bo85WYnoulw';
-        window.location = src;
+        var src = 'https://www.youtube.com/tv#/watch?v=1uIN0I8VCeE';
+        var newLink = $('<a/>');
+        newLink.attr('href', src).attr('id', 'test1').attr('target', '_blank');
+        $('body').append(newLink);
+        $('#test1')[0].click();
     }
 
     if(lux < 10) {
@@ -73,7 +76,7 @@ $(document).ready(function () {
         $('body').css('background-size', 'cover');
     }
 
-    if(lux > 120 && lux < 500){
+    if(lux > 120 && lux < 200){
         widget1.prev();
          $('body').css('background', 'yellow');
         count = 0;
@@ -102,4 +105,6 @@ $(document).ready(function () {
         $('body').css('background','#FFFFFF');
         widget1.pause();
     });
+
+
 });
