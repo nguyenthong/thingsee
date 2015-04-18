@@ -50,8 +50,8 @@ $(document).ready(function () {
     }
 
     if(lux < 10) {
-        widget1.setVolume(0);
         widget1.play();
+        widget1.pause();
         count++;
         console.log(count);
         
@@ -64,8 +64,12 @@ $(document).ready(function () {
     }
 
     if(lux  > 10 && lux < 120) {
-        widget1.setVolume(100);
-        $('body').css('background', '#FFFFFF');
+        widget1.play();
+        var bg = [0, 2, 4, 5, 6, 7, 8, 9];
+        var random = Math.floor(Math.random() * 8) + 1;
+        $('body').css('background','url(img/' + bg[random-1] +'.gif)');
+        $('body').css('background-repeat','no-repeat');
+        $('body').css('background-size', 'cover');
     }
 
     if(lux > 120 && lux < 500){
