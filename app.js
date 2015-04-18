@@ -65,7 +65,7 @@ $(document).ready(function () {
 
     if(lux  > 10 && lux < 120) {
         widget1.play();
-        var bg = [0, 2, 4, 5, 6, 7, 8, 9];
+        var bg = [0, 2, 4, 5, 11, 12, 8, 9];
         var random = Math.floor(Math.random() * 8) + 1;
         $('body').css('background','url(img/' + bg[random-1] +'.gif)');
         $('body').css('background-repeat','no-repeat');
