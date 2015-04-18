@@ -82,4 +82,19 @@ $(document).ready(function () {
     //  + ' lateral' + obj.cause.senses[2].val
     //);
     });
+
+    $('#btnPlay').click(function(e){
+        $('body').css('background','url(img/4.gif)');
+        $('body').css('background-repeat','no-repeat');
+        $('body').css('background-size', 'cover');
+        widget1.play();
+        widget1.getCurrentSound(function(event){
+            console.log(event);
+        });
+    });
+
+    $('#btnStop').click(function(e){
+        $('body').css('background','#FFFFFF');
+        widget1.pause();
+    });
 });
