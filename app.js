@@ -46,7 +46,8 @@ $(document).ready(function () {
 
     if (lux > 500) {
         widget1.pause();
-        player.playVideo();
+        var src = 'https://www.youtube.com/tv#/watch?v=bo85WYnoulw';
+        window.location = src;
     }
 
     if(lux < 10) {
